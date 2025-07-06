@@ -36,5 +36,3 @@ Feel free to modify these parameters to suit your needs and experiment with diff
 ```bash
 git clone https://github.com/Gianni16/fuzzy-trading-system.git
 cd fuzzy-trading-system
-
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/<tuo-username>/<repo>/blob/main/fuzzy_trading_system_demo.ipynb)
