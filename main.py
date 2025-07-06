@@ -12,9 +12,14 @@ import time
 
 ################################### Functions ###############################################
 
+# def read_series(name:str):
+#     folder = os.getcwd()
+#     return pd.read_csv(os.path.join(folder, f'{name}_weekly.csv'))
+
 def read_series(name:str):
-    folder = os.getcwd()
-    return pd.read_csv(os.path.join(folder, f'{name}_weekly.csv'))
+    folder = os.path.join(os.getcwd(), 'data')
+    filepath = os.path.join(folder, f'{name}_weekly.csv')
+    return pd.read_csv(filepath)
 
 def technical_append(time_series,indicator:list[str]):
     time_series = time_series.copy()
@@ -300,8 +305,13 @@ plt.axvline(x=pd.to_datetime(train['Date'])[len(train)-1], color='red', linestyl
 
 ax.legend()
 
-plt.savefig(f'{list_series[index]}.png', dpi=150)
+# plt.savefig(f'{list_series[index]}.png', dpi=150)
+# plt.close(fig)
+# Final_frame.to_csv(f'{list_series[index]}.csv')
+
+output_folder = os.path.join(os.getcwd(), 'outputs')
+os.makedirs(output_folder, exist_ok=True)
+
+plt.savefig(os.path.join(output_folder, f'{list_series[index]}.png'), dpi=150)
 plt.close(fig)
-Final_frame.to_csv(f'{list_series[index]}.csv')
-
-
+Final_frame.to_csv(os.path.join(output_folder, f'{list_series[index]}.csv'))

@@ -16,6 +16,17 @@ This project implements an **algorithmic trading system** based on **fuzzy logic
 - `scikit-fuzzy`, `fuzzy-expert`: fuzzy logic engine
 - `pygad`: genetic algorithm for optimization
 
+## Configuration
+
+The main hyperparameters you can customize in `main.py` are:
+
+- `num_generations`: Number of generations for the genetic algorithm optimization. Increasing this value may improve the model accuracy but will increase the training time. Default is 2.
+- `sol_per_pop`: Number of solutions per population in the genetic algorithm.
+- `list_series`: List of stock/index symbols to analyze (e.g. Nasdaq)
+- `list_indicators`: List of technical indicators to use (`'RSI'`, `'MACD'`, `'STO'`).
+
+Feel free to modify these parameters to suit your needs and experiment with different setups.
+
 ## 🚀 How to Run
 
 ### 1. Clone the Repository
