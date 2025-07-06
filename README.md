@@ -1,5 +1,7 @@
 # Fuzzy Trading System
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Gianni16/fuzzy-trading-system/blob/main/fuzzy_trading_system.ipynb)
+
 This project implements an **algorithmic trading system** based on **fuzzy logic** and technical indicators (RSI, MACD, Stochastic). The fuzzy model is optimized using a **genetic algorithm (GA)** to maximize the performance of a long-short trading strategy.
 
 ## 🎯 Objectives
@@ -34,3 +36,5 @@ Feel free to modify these parameters to suit your needs and experiment with diff
 ```bash
 git clone https://github.com/Gianni16/fuzzy-trading-system.git
 cd fuzzy-trading-system
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/<tuo-username>/<repo>/blob/main/fuzzy_trading_system_demo.ipynb)
