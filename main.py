@@ -294,15 +294,12 @@ ax.set_ylabel('Gain', fontweight = 'bold', fontsize=20)
 ax.set_xlabel('Time', fontweight = 'bold', fontsize=20)
 time_col = pd.to_datetime(Final_frame['Date'])
 norm_factor = Final_frame['Gain'][len(Final_frame)-1]/Final_frame['Close'].max()
-
 plt.plot(time_col, Final_frame['Gain'], alpha=0.2, color='black',linewidth=5, label = 'General Equity')
 plt.plot(time_col, Final_frame['Close']*norm_factor, alpha=0.2, color='orange',linewidth=5, label = "Close")
 plt.plot(time_col, Final_frame['Gain'].cummax(), alpha=0.2, color='red',linewidth=3, label = 'Maximum Equity')
 plt.plot(time_col, Final_frame['Equity_long'], alpha=0.2, color='green',linewidth=3, label = 'Long Equity')
 plt.plot(time_col, Final_frame['Equity_short'], alpha=0.2, color='red',linewidth=3, label = 'Short Equity')
-
 plt.axvline(x=pd.to_datetime(train['Date'])[len(train)-1], color='red', linestyle='--', label='Train')
-
 ax.legend()
 
 # plt.savefig(f'{list_series[index]}.png', dpi=150)
@@ -311,7 +308,6 @@ ax.legend()
 
 output_folder = os.path.join(os.getcwd(), 'outputs')
 os.makedirs(output_folder, exist_ok=True)
-
 plt.savefig(os.path.join(output_folder, f'{list_series[index]}.png'), dpi=150)
 plt.close(fig)
 Final_frame.to_csv(os.path.join(output_folder, f'{list_series[index]}.csv'))
