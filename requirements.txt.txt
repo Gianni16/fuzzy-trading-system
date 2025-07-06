@@ -1,0 +1,7 @@
+matplotlib
+numpy
+pandas
+pandas-ta
+scikit-fuzzy
+fuzzy-expert
+pygad
