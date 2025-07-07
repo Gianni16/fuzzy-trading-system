@@ -35,4 +35,3 @@ Feel free to modify these parameters to suit your needs and experiment with diff
 
 ```bash
 git clone https://github.com/Gianni16/fuzzy-trading-system.git
-cd fuzzy-trading-system
